@@ -1,0 +1,93 @@
+Performing C++ SOURCE FILE Test HAVE_FLAG_STD_CXX20 failed with the following output:
+Change Dir: C:/Users/shiva/OneDrive - BENNETT UNIVERSITY/GSOC/parallelnumericalintegration/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_3a89b/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_3a89b.dir\build.make CMakeFiles/cmTC_3a89b.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/shiva/OneDrive - BENNETT UNIVERSITY/GSOC/parallelnumericalintegration/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3a89b.dir/src.cxx.obj
+C:\MinGW\bin\g++.exe -DHAVE_FLAG_STD_CXX20  -std=c++20 -o CMakeFiles\cmTC_3a89b.dir\src.cxx.obj -c "C:\Users\shiva\OneDrive - BENNETT UNIVERSITY\GSOC\parallelnumericalintegration\build\CMakeFiles\CMakeTmp\src.cxx"
+g++.exe: error: unrecognized command line option '-std=c++20'; did you mean '-std=c++03'?
+CMakeFiles\cmTC_3a89b.dir\build.make:76: recipe for target 'CMakeFiles/cmTC_3a89b.dir/src.cxx.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_3a89b.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/shiva/OneDrive - BENNETT UNIVERSITY/GSOC/parallelnumericalintegration/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3a89b/fast' failed
+mingw32-make.exe: *** [cmTC_3a89b/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Detecting CXX OpenMP failed with the following output:
+Change Dir: C:/Users/shiva/OneDrive - BENNETT UNIVERSITY/GSOC/parallelnumericalintegration/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_56981/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_56981.dir\build.make CMakeFiles/cmTC_56981.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/shiva/OneDrive - BENNETT UNIVERSITY/GSOC/parallelnumericalintegration/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_56981.dir/OpenMPTryFlag.cpp.obj
+C:\MinGW\bin\g++.exe   -fopenmp -v -std=gnu++1z -o CMakeFiles\cmTC_56981.dir\OpenMPTryFlag.cpp.obj -c "C:\Users\shiva\OneDrive - BENNETT UNIVERSITY\GSOC\parallelnumericalintegration\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp"
+Using built-in specs.
+COLLECT_GCC=C:\MinGW\bin\g++.exe
+Target: mingw32
+Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --with-gmp=/mingw --with-mpfr=/mingw --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --target=mingw32 --with-arch=i586 --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --with-tune=generic --enable-libgomp --disable-libvtv --enable-nls
+Thread model: win32
+gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++1z' '-o' 'CMakeFiles\cmTC_56981.dir\OpenMPTryFlag.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=i586' '-mthreads' '-pthread'
+ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/cc1plus.exe -quiet -v -iprefix c:\mingw\bin\../lib/gcc/mingw32/6.3.0/ -D_MT -D_REENTRANT C:\Users\shiva\OneDrive - BENNETT UNIVERSITY\GSOC\parallelnumericalintegration\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -mtune=generic -march=i586 -mthreads -auxbase-strip CMakeFiles\cmTC_56981.dir\OpenMPTryFlag.cpp.obj -std=gnu++1z -version -fopenmp -o C:\Users\shiva\AppData\Local\Temp\ccUQp6gI.s
+GNU C++14 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)
+	compiled by GNU C version 6.3.0, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.2, isl version 0.15
+warning: MPC header version 1.0.2 differs from library version 1.0.3.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include/c++"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include/c++/mingw32"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include/c++/backward"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include"
+ignoring duplicate directory "/mingw/lib/gcc/mingw32/6.3.0/../../../../include"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../include"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include-fixed"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"
+ignoring duplicate directory "/mingw/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include
+End of search list.
+GNU C++14 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)
+	compiled by GNU C version 6.3.0, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.2, isl version 0.15
+warning: MPC header version 1.0.2 differs from library version 1.0.3.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: af09a87986453bf79da3565f33c7648f
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++1z' '-o' 'CMakeFiles\cmTC_56981.dir\OpenMPTryFlag.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=i586' '-mthreads' '-pthread'
+ c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/as.exe -v -o CMakeFiles\cmTC_56981.dir\OpenMPTryFlag.cpp.obj C:\Users\shiva\AppData\Local\Temp\ccUQp6gI.s
+GNU assembler version 2.28 (mingw32) using BFD version (GNU Binutils) 2.28
+COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
+LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++1z' '-o' 'CMakeFiles\cmTC_56981.dir\OpenMPTryFlag.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=i586' '-mthreads' '-pthread'
+Linking CXX executable cmTC_56981.exe
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_56981.dir\link.txt --verbose=1
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_56981.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\cmTC_56981.dir/objects.a @CMakeFiles\cmTC_56981.dir\objects1.rsp
+C:\MinGW\bin\g++.exe  -fopenmp -v -Wl,--whole-archive CMakeFiles\cmTC_56981.dir/objects.a -Wl,--no-whole-archive -o cmTC_56981.exe -Wl,--out-implib,libcmTC_56981.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_56981.dir\linklibs.rsp
+Using built-in specs.
+COLLECT_GCC=C:\MinGW\bin\g++.exe
+COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe
+Target: mingw32
+Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --with-gmp=/mingw --with-mpfr=/mingw --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --target=mingw32 --with-arch=i586 --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --with-tune=generic --enable-libgomp --disable-libvtv --enable-nls
+Thread model: win32
+gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
+COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
+LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../
+Reading specs from c:/mingw/bin/../lib/gcc/mingw32/6.3.0/libgomp.spec
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_56981.exe' '-v' '-shared-libgcc' '-mtune=generic' '-march=i586' '-mthreads' '-pthread'
+ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\shiva\AppData\Local\Temp\ccHE83mZ.res -plugin-opt=-pass-through=-lmingwthrd -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingwthrd -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_56981.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. @C:\Users\shiva\AppData\Local\Temp\ccwSrRVN -lgomp -lmingwthrd -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingwthrd -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot find -lpthread
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_56981.dir\build.make:99: recipe for target 'cmTC_56981.exe' failed
+mingw32-make.exe[1]: *** [cmTC_56981.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/shiva/OneDrive - BENNETT UNIVERSITY/GSOC/parallelnumericalintegration/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_56981/fast' failed
+mingw32-make.exe: *** [cmTC_56981/fast] Error 2
+
+
+

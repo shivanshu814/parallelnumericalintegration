@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Users/shiva/OneDrive - BENNETT UNIVERSITY/GSOC/parallelnumericalintegration/build/src",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -std=gnu++1z -o CMakeFiles\\taylor_future.dir\\taylor_future.cpp.obj -c \"C:\\Users\\shiva\\OneDrive - BENNETT UNIVERSITY\\GSOC\\parallelnumericalintegration\\src\\taylor_future.cpp\"",
+  "file": "C:/Users/shiva/OneDrive - BENNETT UNIVERSITY/GSOC/parallelnumericalintegration/src/taylor_future.cpp"
+}
+]

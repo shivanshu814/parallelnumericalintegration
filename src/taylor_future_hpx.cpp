@@ -14,7 +14,8 @@
 #include <string>
 #include <vector>
 
-int main(int args, char** argv) {
+int main(int args, char **argv)
+{
   int n = std::stoi(argv[1]);
   double x = std::stod(argv[2]);
   size_t amount = std::stoi(argv[3]);
@@ -27,18 +28,20 @@ int main(int args, char** argv) {
   auto start = std::chrono::high_resolution_clock::now();
 
   std::vector<hpx::future<double>> futures;
-  for (size_t i = 0; i < amount; i++) {
+  for (size_t i = 0; i < amount; i++)
+  {
     size_t begin = i * partitions;
     size_t end = (i + 1) * partitions;
-    if (i == amount - 1) end = n;
+    if (i == amount - 1)
+      end = n;
 
-    hpx::future<double> f = hpx::async([begin, end, x, &parts]() -> double {
+    hpx::future<double> f = hpx::async([begin, end, x, &parts]() -> double
+                                       {
       std::for_each(parts.begin() + begin, parts.begin() + end, [x](double& e) {
         e = std::pow(-1.0, e + 1) * std::pow(x, e) / (e);
       });
 
-      return hpx::reduce(parts.begin() + begin, parts.begin() + end, 0.);
-    });
+      return hpx::reduce(parts.begin() + begin, parts.begin() + end, 0.); });
 
     futures.push_back(std::move(f));
   }
@@ -46,11 +49,11 @@ int main(int args, char** argv) {
   double result = 0;
 
   hpx::when_all(futures)
-      .then([&](auto&& f) {
+      .then([&](auto &&f)
+            {
         auto futures = f.get();
 
-        for (size_t i = 0; i < futures.size(); i++) result += futures[i].get();
-      })
+        for (size_t i = 0; i < futures.size(); i++) result += futures[i].get(); })
       .get();
 
   auto end = std::chrono::high_resolution_clock::now();

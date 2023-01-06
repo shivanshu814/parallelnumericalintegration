@@ -12,7 +12,8 @@
 #include <string>
 #include <vector>
 
-int main(int args, char** argv) {
+int main(int args, char **argv)
+{
   int n = std::stoi(argv[1]);
   double x = std::stod(argv[2]);
   size_t amount = std::stoi(argv[3]);
@@ -25,30 +26,32 @@ int main(int args, char** argv) {
   auto start = std::chrono::high_resolution_clock::now();
 
   std::vector<std::future<double>> futures;
-  for (size_t i = 0; i < amount; i++) {
+  for (size_t i = 0; i < amount; i++)
+  {
     size_t begin = i * partitions;
     size_t end = (i + 1) * partitions;
-    if (i == amount - 1) end = n;
+    if (i == amount - 1)
+      end = n;
 
-    std::future<double> f = std::async([begin, end, x, &parts]() -> double {
+    std::future<double> f = std::async([begin, end, x, &parts]() -> double
+                                       {
       std::for_each(parts.begin() + begin, parts.begin() + end, [x](double& e) {
         e = std::pow(-1.0, e + 1) * std::pow(x, e) / (e);
       });
 
-      return std::accumulate(parts.begin() + begin, parts.begin() + end, 0.);
-    });
+      return std::accumulate(parts.begin() + begin, parts.begin() + end, 0.); });
 
     futures.push_back(std::move(f));
   }
 
   double result = 0;
-  for (size_t i = 0; i < futures.size(); i++) result += futures[i].get();
+  for (size_t i = 0; i < futures.size(); i++)
+    result += futures[i].get();
 
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> diff = end - start;
   std::cout << amount << "," << diff.count() << std::endl;
 
-  std::cout << "Difference of Taylor and C++ result " << result - std::log1p(x)
-            << " after " << n << " iterations." << std::endl;
+  std::cout << "Difference of Taylor and C++ result " << result - std::log1p(x) << " after " << n << " iterations." << std::endl;
   return EXIT_SUCCESS;
 }
